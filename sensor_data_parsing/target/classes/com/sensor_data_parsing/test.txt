@@ -1,0 +1,11 @@
+application/9a87910d-fc6c-4f10-a6fd-a626a1ca6b4a/device/24e124128c067999/event/up: 
+    {"deduplicationId":"f9f397a7-15da-4752-8903-a060018e8b9b","time":"2024-12-01T06:42:17.915+00:00",
+        "deviceInfo":{"tenantId":"a3e5ac43-3f8a-45da-91a6-e07b18cc6646","tenantName":"NHN Academy 경남","applicationId":"9a87910d-fc6c-4f10-a6fd-a626a1ca6b4a","applicationName":"NHNAcademyEMS","deviceProfileId":"7c372bb4-a4ce-46f3-b6af-6119d889e4b3","deviceProfileName":"AM107-OTAA","deviceName":"AM107-067999(강의실A)","devEui":"24e124128c067999","deviceClassEnabled":"CLASS_A",
+            "tags":{"place":"class_a","spot":"입구","site":"nhnacademy","name":"입구","branch":"gyeongnam_campus"}},
+    "devAddr":"00b45993","adr":true,"dr":2,"fCnt":8515,"fPort":85,"confirmed":false,"data":"A2fHAARoQgZlCgAHAAEABWoAAAd9IgIIfUsACXNPJw==",
+        "object":{"illumination":10.0,"infrared_and_visible":7.0,"co2":546.0,"tvoc":75.0,"infrared":1.0,"humidity":33.0,"activity":0.0,"temperature":19.9,"pressure":1006.3},
+    "rxInfo":[{"gatewayId":"24e124fffef79304","uplinkId":30613,"gwTime":"2024-12-01T06:42:17.915530+00:00","nsTime":"2024-12-01T06:42:17.902495529+00:00","timeSinceGpsEpoch":"1417070555.915s","rssi":-106,"snr":-16.8,"location":{},"context":"EoQKtA==",
+        "metadata":{"region_common_name":"KR920","region_config_id":"kr920"},"crcStatus":"CRC_OK"}],
+    "txInfo":{"frequency":922100000,
+        "modulation":{
+            "lora":{"bandwidth":125000,"spreadingFactor":10,"codeRate":"CR_4_5"}}}}
