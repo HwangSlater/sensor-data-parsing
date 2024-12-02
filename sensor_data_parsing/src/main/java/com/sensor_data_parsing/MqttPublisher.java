@@ -26,7 +26,7 @@ public class MqttPublisher {
             client.disconnect();
             System.out.println("Disconnected from the broker.");
         } catch (MqttException e) {
-            e.printStackTrace();
+            System.err.println("Mqtt연결 중 exception발생: " + e);
         }
     }
 }

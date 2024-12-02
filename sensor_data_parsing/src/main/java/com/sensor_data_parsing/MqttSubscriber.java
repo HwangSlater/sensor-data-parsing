@@ -69,7 +69,7 @@ public class MqttSubscriber {
             try {
                 Thread.sleep(100000);
             } catch (InterruptedException e) {
-                System.err.println("대기하는 중 interrupt발생" + e);
+                System.err.println("대기하는 중 interrupt발생: " + e);
             }
 
             // 클라이언트 종료
@@ -78,7 +78,7 @@ public class MqttSubscriber {
             System.out.println("Disconnected!");
 
         } catch (MqttException e) {
-            System.err.println("Mqtt연결 중 exception발생" + e);
+            System.err.println("Mqtt연결 중 exception발생: " + e);
         }
     }
 
