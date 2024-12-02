@@ -44,28 +44,36 @@ public class ControlCenter {
                                         ObjectMapper objectMapper = new ObjectMapper();
                                         try {
                                                 JsonNode rootNode = objectMapper.readTree(message);
-                                                // deviceName 추출
-                                                String deviceName = rootNode.path("deviceInfo").path("deviceName")
-                                                                .asText();
-                                                // spot 추출
-                                                String spotName = rootNode.path("deviceInfo").path("tags").path("name")
-                                                                .asText();
-                                                System.out.println("deviceName: " + deviceName);
-                                                System.out.println("spot: " + spotName);
 
                                                 // data를 추출하기위해 object 추출
                                                 JsonNode objectNode = rootNode.path("object");
-                                                // dataName: dataValue를 맵에 저장
-                                                Map<String, Object> dataMap = objectMapper
-                                                                .readValue(objectNode.toString(), Map.class);
+                                                if (!objectNode.isMissingNode()) { // object경로가 있을 경우에만 출력
+                                                        // deviceName 추출
+                                                        String deviceName = rootNode.path("deviceInfo")
+                                                                        .path("deviceName")
+                                                                        .asText();
+                                                        // spot 추출
+                                                        String spotName = rootNode.path("deviceInfo").path("tags")
+                                                                        .path("name")
+                                                                        .asText();
+                                                        System.out.println("deviceName: " + deviceName);
+                                                        System.out.println("spot: " + spotName);
 
-                                                // data 출력
-                                                System.out.println("----------data----------");
-                                                for (Map.Entry<String, Object> entry : dataMap.entrySet()) {
-                                                        System.out.println(entry.getKey() + ": " + entry.getValue());
+                                                        // dataName: dataValue를 맵에 저장
+                                                        Map<String, Object> dataMap = objectMapper
+                                                                        .readValue(objectNode.toString(), Map.class);
+
+                                                        // data 출력
+                                                        System.out.println("----------data----------");
+                                                        for (Map.Entry<String, Object> entry : dataMap.entrySet()) {
+                                                                System.out.println(entry.getKey() + ": "
+                                                                                + entry.getValue());
+                                                        }
+                                                        System.out.println();
                                                 }
-                                                System.out.println();
+
                                         } catch (IOException e) {
+                                                System.err.println("JSON 파싱 중 오류가 발생: " + e.getMessage());
                                         }
 
                                 })
