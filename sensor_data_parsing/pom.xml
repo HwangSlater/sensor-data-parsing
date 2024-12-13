@@ -37,6 +37,5 @@
       <artifactId>plc4j-driver-modbus</artifactId>
       <version>0.10.0</version>
     </dependency>
-
   </dependencies>
 </project>
